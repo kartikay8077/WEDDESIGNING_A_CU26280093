@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Form</title>
+
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        form {
+            width: 400px;
+            margin: 30px auto;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: blue;
+            background-color: #eef5ff;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form>
+
+        <h2>Feedback</h2>
+
+        <input type="text" placeholder="Your Name">
+
+        <input type="email" placeholder="Your Email">
+
+        <textarea rows="5"
+                  placeholder="Your Feedback"></textarea>
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+</body>
+</html>

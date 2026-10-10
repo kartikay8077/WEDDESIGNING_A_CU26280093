@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+
+    <style>
+        .contact-container {
+            display: flex;
+            gap: 30px;
+            padding: 30px;
+        }
+
+        .form, .location {
+            flex: 1;
+            padding: 25px;
+            background-color: #f2f2f2;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 600px) {
+            .contact-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contact-container">
+
+        <div class="form">
+
+            <h2>Contact Us</h2>
+
+            <input type="text" placeholder="Name">
+
+            <input type="email" placeholder="Email">
+
+            <textarea rows="5"
+                      placeholder="Message"></textarea>
+
+            <button>Send Message</button>
+
+        </div>
+
+        <div class="location">
+
+            <h2>Our Location</h2>
+
+            <p>Roshnabad</p>
+            <p>Haridwar, Uttarakhand</p>
+            <p>India</p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

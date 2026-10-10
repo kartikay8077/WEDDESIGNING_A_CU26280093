@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Callback Function</title>
+</head>
+<body>
+
+    <h2>Callback and setTimeout</h2>
+
+    <button onclick="startProcess()">Start</button>
+
+    <p id="result"></p>
+
+    <script>
+        function greet(name, callback) {
+
+            setTimeout(function() {
+
+                document.getElementById("result").innerHTML =
+                    "Hello, " + name;
+
+                callback();
+
+            }, 2000);
+        }
+
+        function completed() {
+
+            document.getElementById("result").innerHTML +=
+                "<br>Process completed after 2 seconds.";
+
+        }
+
+        function startProcess() {
+
+            document.getElementById("result").innerHTML =
+                "Processing...";
+
+            greet("Divyanshi", completed);
+        }
+    </script>
+
+</body>
+</html>

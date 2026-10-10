@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flexbox Layout</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            height: 100px;
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            display: flex;
+            min-height: calc(100vh - 100px);
+        }
+
+        .nav {
+            width: 25%;
+            background-color: #ddd;
+            padding: 20px;
+        }
+
+        .nav a {
+            display: block;
+            margin: 15px 0;
+            text-decoration: none;
+            color: black;
+        }
+
+        .content {
+            width: 75%;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>My Website</h1>
+    </div>
+
+    <div class="container">
+
+        <div class="nav">
+            <h2>Navigation</h2>
+
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <div class="content">
+            <h2>Welcome</h2>
+
+            <p>
+                This is the content section of the webpage.
+                CSS Flexbox is used to create a layout similar
+                to the old HTML frameset layout.
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>

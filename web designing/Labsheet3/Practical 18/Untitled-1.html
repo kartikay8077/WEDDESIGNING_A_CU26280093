@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo List</title>
+
+    <style>
+        li {
+            margin: 10px;
+        }
+
+        button {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Todo List</h2>
+
+    <input type="text"
+           id="task"
+           placeholder="Enter task">
+
+    <button onclick="addTask()">Add</button>
+
+    <ul id="list"></ul>
+
+    <script>
+        function addTask() {
+
+            let task = document.getElementById("task").value;
+
+            if (task === "") {
+                return;
+            }
+
+            let li = document.createElement("li");
+
+            li.innerHTML =
+                task +
+                ' <button onclick="this.parentElement.remove()">Delete</button>';
+
+            document.getElementById("list").appendChild(li);
+
+            document.getElementById("task").value = "";
+        }
+    </script>
+
+</body>
+</html>

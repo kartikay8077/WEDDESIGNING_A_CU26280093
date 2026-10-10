@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ES6 Features</title>
+</head>
+<body>
+
+    <h2>ES6 JavaScript Features</h2>
+
+    <p id="result"></p>
+
+    <script>
+        let student = {
+            name: "Divyanshi",
+            course: "MCA",
+            age: 20
+        };
+
+        let { name, course, age } = student;
+
+        let message = (name, course) => {
+            return `Student ${name} is studying ${course}.`;
+        };
+
+        document.getElementById("result").innerHTML =
+            message(name, course) +
+            `<br>Age: ${age}`;
+    </script>
+
+</body>
+</html>

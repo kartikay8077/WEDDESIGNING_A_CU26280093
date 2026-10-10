@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic DOM</title>
+</head>
+<body>
+
+    <h2>Add Items</h2>
+
+    <input type="text" id="text" placeholder="Enter text">
+    <button onclick="addItem()">Add</button>
+
+    <div id="container"></div>
+
+    <script>
+        function addItem() {
+
+            let text = document.getElementById("text").value;
+
+            if (text !== "") {
+
+                let p = document.createElement("p");
+
+                p.textContent = text;
+
+                document.getElementById("container")
+                        .appendChild(p);
+
+                document.getElementById("text").value = "";
+            }
+        }
+    </script>
+
+</body>
+</html>

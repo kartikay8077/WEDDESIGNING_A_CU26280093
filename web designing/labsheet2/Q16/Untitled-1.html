@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Evaluation</title>
+
+    <style>
+        .form-container {
+            width: 600px;
+            margin: auto;
+        }
+
+        .field {
+            margin-bottom: 15px;
+        }
+
+        label {
+            width: 150px;
+            float: left;
+        }
+
+        input, select {
+            float: left;
+            width: 300px;
+        }
+
+        textarea {
+            width: 300px;
+        }
+
+        .clear {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+
+        <h2>Employee Evaluation</h2>
+
+        <div class="field">
+
+            <label>Employee Name:</label>
+            <input type="text">
+
+            <div class="clear"></div>
+
+        </div>
+
+        <div class="field">
+
+            <label>Department:</label>
+
+            <select>
+                <option>IT</option>
+                <option>HR</option>
+                <option>Finance</option>
+            </select>
+
+            <div class="clear"></div>
+
+        </div>
+
+        <div class="field">
+
+            <label>Comments:</label>
+
+            <textarea rows="5"></textarea>
+
+            <div class="clear"></div>
+
+        </div>
+
+        <button>Submit</button>
+
+    </div>
+
+</body>
+</html>

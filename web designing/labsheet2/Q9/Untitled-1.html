@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Survey Form</title>
+
+    <style>
+        form {
+            width: 500px;
+            margin: 30px auto;
+        }
+
+        fieldset {
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        legend {
+            font-weight: bold;
+        }
+
+        input {
+            margin: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form>
+
+        <fieldset>
+
+            <legend>Personal Details</legend>
+
+            Name:
+            <input type="text"><br>
+
+            Email:
+            <input type="email">
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Feedback</legend>
+
+            <input type="radio" name="rating"> Excellent
+            <input type="radio" name="rating"> Good
+            <input type="radio" name="rating"> Average
+
+        </fieldset>
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+</body>
+</html>

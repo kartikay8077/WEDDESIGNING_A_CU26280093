@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Range Slider</title>
+
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        input {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Product Settings</h2>
+
+    <label>Volume:</label>
+
+    <input type="range"
+           min="0"
+           max="100"
+           value="50"
+           oninput="volumeValue.value=this.value">
+
+    <output id="volumeValue">50</output>%
+
+    <br><br>
+
+    <label>Quantity:</label>
+
+    <input type="number"
+           min="1"
+           value="1">
+
+    <span>units</span>
+
+</body>
+</html>

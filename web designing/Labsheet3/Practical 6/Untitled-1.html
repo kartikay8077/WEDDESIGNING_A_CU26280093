@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Manipulation</title>
+</head>
+<body>
+
+    <h2>Array Manipulation</h2>
+
+    <p id="result"></p>
+
+    <script>
+        let numbers = [10, 20, 30, 40, 50];
+
+        numbers.push(60);
+
+        let removed = numbers.pop();
+
+        let doubled = numbers.map(function(num) {
+            return num * 2;
+        });
+
+        let filtered = numbers.filter(function(num) {
+            return num > 20;
+        });
+
+        numbers.sort(function(a, b) {
+            return a - b;
+        });
+
+        document.getElementById("result").innerHTML =
+            "Original Array: 10, 20, 30, 40, 50<br>" +
+            "After Push: 10, 20, 30, 40, 50, 60<br>" +
+            "After Pop: " + numbers + "<br>" +
+            "Mapped Array: " + doubled + "<br>" +
+            "Filtered Array: " + filtered;
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multi-Step Form</title>
+
+    <style>
+        .step {
+            display: none;
+            width: 400px;
+            margin: 30px auto;
+        }
+
+        .active {
+            display: block;
+        }
+
+        input {
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="step1" class="step active">
+
+        <h2>Step 1: Personal Details</h2>
+
+        <input type="text"
+               placeholder="Name">
+
+        <button onclick="showStep(2)">Next</button>
+
+    </div>
+
+    <div id="step2" class="step">
+
+        <h2>Step 2: Contact Details</h2>
+
+        <input type="email"
+               placeholder="Email">
+
+        <button onclick="showStep(1)">Back</button>
+
+        <button onclick="showStep(3)">Next</button>
+
+    </div>
+
+    <div id="step3" class="step">
+
+        <h2>Step 3: Complete</h2>
+
+        <p>Your registration is ready.</p>
+
+        <button>Submit</button>
+
+    </div>
+
+    <script>
+        function showStep(step) {
+
+            document.querySelectorAll(".step").forEach(function(element) {
+                element.classList.remove("active");
+            });
+
+            document.getElementById("step" + step)
+                    .classList.add("active");
+        }
+    </script>
+
+</body>
+</html>

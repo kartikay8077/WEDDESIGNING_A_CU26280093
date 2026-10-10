@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Table Generator</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        input {
+            padding: 8px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 25px auto;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px 20px;
+        }
+
+        th {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Dynamic Table Generator</h2>
+
+    <input type="number" id="rows" placeholder="Enter rows">
+    <input type="number" id="columns" placeholder="Enter columns">
+
+    <br><br>
+
+    <button onclick="generateTable()">Generate Table</button>
+
+    <div id="tableContainer"></div>
+
+    <script>
+
+        function generateTable() {
+
+            let rows = document.getElementById("rows").value;
+            let columns = document.getElementById("columns").value;
+
+            rows = Number(rows);
+            columns = Number(columns);
+
+            if (rows <= 0 || columns <= 0) {
+                alert("Please enter valid row and column numbers.");
+                return;
+            }
+
+            let table = "<table>";
+
+            // Create table rows and columns
+            for (let i = 1; i <= rows; i++) {
+
+                table += "<tr>";
+
+                for (let j = 1; j <= columns; j++) {
+
+                    table += "<td>Row " + i +
+                             ", Column " + j + "</td>";
+                }
+
+                table += "</tr>";
+            }
+
+            table += "</table>";
+
+            document.getElementById("tableContainer").innerHTML = table;
+        }
+
+    </script>
+
+</body>
+</html>

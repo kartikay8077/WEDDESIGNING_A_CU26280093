@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Keyboard Events</title>
+
+    <style>
+        #box {
+            width: 500px;
+            padding: 30px;
+            margin: 50px auto;
+            border: 2px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="box">
+        Press any key on your keyboard.
+    </div>
+
+    <script>
+        document.addEventListener("keydown", function(event) {
+
+            document.getElementById("box").innerHTML =
+                "Key: " + event.key +
+                "<br>Key Code: " + event.code;
+
+        });
+
+        document.addEventListener("keyup", function(event) {
+
+            console.log("Key released: " + event.key);
+
+        });
+    </script>
+
+</body>
+</html>
